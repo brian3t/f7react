@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+/* my-app.js */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Import React
+import React from 'react';
 
-export default App;
+// Import ReactDOM
+import ReactDOM from 'react-dom';
+
+// Import F7 Bundle
+import Framework7 from 'framework7/lite-bundle';
+
+// Import F7-React Plugin
+import Framework7React from 'framework7-react';
+
+// Init F7-React Plugin
+Framework7.use(Framework7React);
+
+// Import Main App component
+import App from './App.jsx';
+
+// Mount React App
+ReactDOM.render(
+  React.createElement(App),
+  document.getElementById('app')
+)
